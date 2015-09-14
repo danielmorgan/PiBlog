@@ -37,6 +37,28 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $hidden = ['password', 'remember_token'];
 
+    /*
+    |--------------------------------------------------------------------------
+    | Accessors and Mutators
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * URL Slug accessor.
+     *
+     * @return string
+     */
+    public function getSlugAttribute()
+    {
+        return str_slug($this->attributes['name']);
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    */
+
 	/**
      * Users can author many Posts.
      *

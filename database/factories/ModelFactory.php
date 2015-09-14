@@ -21,8 +21,9 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Post::class, function (Faker\Generator $faker) {
-dd(App\User::all());
-    if ($userCollection = App\User::all()) {
+    $userCollection = App\User::all();
+
+    if ($userCollection->count()) {
         $user = $userCollection->random();
     } else {
         $user = factory(App\User::class)->create();
@@ -31,6 +32,6 @@ dd(App\User::all());
     return [
         'user_id' => $user->id,
         'title' => $faker->sentence(),
-        'content' => $faker->paragraphs(),
+        'content' => $faker->paragraphs(rand(2, 8), true),
     ];
 });

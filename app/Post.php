@@ -11,14 +11,20 @@ class Post extends Model
 	 *
 	 * @var array
 	 */
-    protected $fillable = ['title', 'content'];
+    protected $fillable = ['user_id', 'title', 'content'];
+
+	/*
+	|--------------------------------------------------------------------------
+	| Relationships
+	|--------------------------------------------------------------------------
+	*/
 
 	/**
 	 * Posts belong to the User who authored them.
 	 *
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
 	 */
-	public function users()
+	public function user()
 	{
 		return $this->belongsTo(User::class);
 	}
