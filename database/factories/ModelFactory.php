@@ -32,6 +32,6 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
     return [
         'user_id' => $user->id,
         'title' => $faker->sentence(),
-        'content' => $faker->paragraphs(rand(2, 8), true),
+        'content' => '<p>' . implode('</p><p>', $faker->paragraphs(rand(3, 12))) . '</p>',
     ];
 });
