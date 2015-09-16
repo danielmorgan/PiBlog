@@ -1,0 +1,40 @@
+#sidebar {
+    display: none;
+    @media (min-width: $screen-md-min) { display: block; }
+
+    height: 100%;
+    background: $brand-primary;
+    color: $lighter;
+
+}
+
+#branding {
+    margin: 40px 0;
+    text-align: center;
+
+    h1 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+    .strapline {
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        color: lighten($brand-primary, 50%);
+    }
+}
+
+#trips {
+    margin-top: 60px;
+    text-align: center;
+    padding: 0 50px;
+
+    .trip {
+        margin-bottom: 30px;
+        &.current {
+            opacity: 0.75;
+        }
+    }
+}

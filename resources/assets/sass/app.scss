@@ -1,47 +1,45 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "_variables";
 
 body {
-    font-size: 16px;
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $darker;
+    @media (min-width: $screen-lg-min) {
+        font-size: 20px;
+        line-height: 30px;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway';
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.nopadding {
+    padding: 0 !important;
 }
 
 #header {
     position: fixed;
     z-index: 100;
     width: 100%;
-    height: 20px;
+    height: 5px;
     background: $lighter;
 }
 
 #sidebar {
     position: fixed;
-    height: 100%;
-    background: $brand-primary;
-    padding-top: 20px;
+    padding: 25px 0 0;
 }
 
 #content {
-    float: right;
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
-.post {
-    margin: 0 0 50px;
-
-    h1 {
-        margin: 0;        
-        font-size: 2em;
-        font-weight: 800;
-        text-transform: uppercase;
-        color: $brand-primary;
-    }
-    .meta-data {
-        color: $middle;
-        margin: 0 0 10px;
-    }
-}
+@import "_sidebar";
+@import "_blog";

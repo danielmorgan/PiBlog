@@ -2,7 +2,7 @@
 @section('title', 'All Posts')
 
 @section('content')
-<section class="posts">
+<section class="posts col-lg-10 col-lg-offset-1">
 	@foreach ($posts as $post)
 	    <article class="post">
 	        <h1>{{ $post->title }}</h1>

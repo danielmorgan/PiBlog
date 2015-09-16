@@ -1,0 +1,16 @@
+.post {
+    margin: 0 auto 50px;
+    max-width: 75ch;
+
+    h1 {
+        margin: 0;        
+        font-size: 2em;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $brand-primary;
+    }
+    .meta-data {
+        color: $middle;
+        margin: 0 0 10px;
+    }
+}

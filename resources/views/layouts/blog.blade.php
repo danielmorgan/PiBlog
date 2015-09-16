@@ -20,8 +20,43 @@
             </div>
 
             <div class="row">
-                <div id="sidebar" class="col-xs-hidden col-sm-4 col-lg-6"></div>
-                <div id="content" class="col-xs-12 col-sm-8 col-lg-6">@yield('content')</div>
+
+                <div id="sidebar" class="
+                    col-md-4 
+                    col-lg-5
+                ">
+                    <div id="branding">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h1>Lorem Ipsum</h1>
+                                <p class="strapline">Just another custom built non-WordPress blog.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="trips">
+                        <a href="#" class="trip current col-xs-4">
+                            <img src="http://placehold.it/250x250" class="img-responsive">
+                        </a>
+                        <a href="#" class="trip col-xs-4">
+                            <img src="http://placehold.it/250x250" class="img-responsive">
+                        </a>
+                        <a href="#" class="trip col-xs-4">
+                            <img src="http://placehold.it/250x250" class="img-responsive">
+                        </a>
+                        <a href="#" class="trip col-xs-4">
+                            <img src="http://placehold.it/250x250" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="
+                    col-md-8 
+                    col-md-offset-4 
+                    col-lg-7
+                    col-lg-offset-5
+                ">@yield('content')</div>
+                
             </div>
 
         </div>
