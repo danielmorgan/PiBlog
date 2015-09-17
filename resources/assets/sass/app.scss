@@ -5,11 +5,13 @@
 @import "_mixins";
 
 body {
+    overflow-x: hidden;
+
     font-family: 'Crimson Text', serif;
     font-weight: 400;
+    color: $darker;
     font-size: 20px;
     line-height: 30px;
-    color: $darker;
     @media (min-width: $screen-lg-min) {
         font-size: 22px;
         line-height: 34px;
@@ -30,11 +32,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #sidebar {
+    transition: all 0.25s ease-in-out;
     position: fixed;
     padding: 25px 0 0;
 }
 
 #content {
+    transition: all 0.25s ease-in-out;
     padding-top: 25px;
     background: #fff;
 }

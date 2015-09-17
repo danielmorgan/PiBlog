@@ -6,6 +6,12 @@
     background: $brand-primary;
     color: $lighter;
     padding: 0 30px;
+    &:hover {
+        width: 90%;
+        & + #content {
+            margin-left: 90%;
+        }
+    }
 }
 
 #branding {
