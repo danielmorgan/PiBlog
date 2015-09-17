@@ -2,26 +2,23 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "_variables";
+@import "_mixins";
 
 body {
     font-family: 'Crimson Text', serif;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 30px;
     color: $darker;
     @media (min-width: $screen-lg-min) {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 22px;
+        line-height: 34px;
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-}
-
-.nopadding {
-    padding: 0 !important;
 }
 
 #header {
@@ -39,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #content {
     padding-top: 25px;
+    background: #fff;
 }
 
 @import "_sidebar";
