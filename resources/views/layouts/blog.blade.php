@@ -16,6 +16,8 @@
             </div>
 
             <div class="row">
+                <i class="menu-button"></i>
+
                 <div id="sidebar" class="col-md-4 col-lg-5">
                     @include('layouts.sidebar')
                 </div>
