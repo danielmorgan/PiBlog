@@ -62,7 +62,10 @@
             padding: 0 15px;
         }
 
-        &.current img { opacity: 0.75; }
+        img { transition: transform .5s ease; }
+        &:hover img {
+            transform: scale(1.1);
+        }
     }
 }
 
@@ -73,6 +76,9 @@
     
     .social-profile {
         display: inline-block;
+        width: 1.5em;
+        margin-right: 0.5em;
+        &:last-child { margin-right: 0; }
         &::before { font-size: 1.5em; }
     }
 }

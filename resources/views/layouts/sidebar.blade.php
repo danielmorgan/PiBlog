@@ -12,25 +12,25 @@
     <div id="trips">
         <div class="trip current col-xs-4">
             <h2>Current trip</h2>
-            <a href="#" class="">
-                <img src="http://placehold.it/250x250" class="img-responsive">
+            <a href="/2015-new-england" class="">
+                <img src="/img/trip-2015-new-england.jpg" class="img-responsive">
             </a>
         </div>
         <div class="trip col-xs-4">
             <h2>Past trips</h2>
-            <a href="#">
-                <img src="http://placehold.it/250x250" class="img-responsive">
+            <a href="/2015-deep-south">
+                <img src="/img/trip-2015-deep-south.jpg" class="img-responsive">
             </a>
         </div>
         <div class="trip col-xs-4">
             <h2>&nbsp;</h2>
-            <a href="#">
-                <img src="http://placehold.it/250x250" class="img-responsive">
+            <a href="/2013-midwest">
+                <img src="/img/trip-2013-midwest.jpg" class="img-responsive">
             </a>
         </div>
         <div class="trip col-xs-4">
-            <a href="#">
-                <img src="http://placehold.it/250x250" class="img-responsive">
+            <a href="/2012-wild-west">
+                <img src="/img/trip-2012-wild-west.jpg" class="img-responsive">
             </a>
         </div>
     </div>
