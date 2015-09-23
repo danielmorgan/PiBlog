@@ -4,9 +4,9 @@
 @import "_variables";
 @import "_mixins";
 
-body {
-    overflow-x: hidden;
+html, body { height: 100%; }
 
+body {
     font-family: 'Crimson Text', serif;
     font-weight: 400;
     color: $darker;

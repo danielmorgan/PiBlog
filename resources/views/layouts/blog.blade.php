@@ -13,13 +13,13 @@
             <div class="row">
                 <i class="menu-button"></i>
 
-                <div id="sidebar" class="col-md-4 col-lg-5">
+                <div id="sidebar" class="col-md-5">
                     <div class="row">
                         @include('layouts.sidebar')
                     </div>
                 </div>
 
-                <div id="content" class="col-md-8 col-md-offset-4 col-lg-7 col-lg-offset-5">
+                <div id="content" class="col-md-7 col-md-offset-5">
                     @yield('content')
                 </div>
             </div>

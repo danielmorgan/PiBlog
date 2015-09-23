@@ -1,14 +1,24 @@
 #sidebar {
-    display: block;
+    display: none;
+    @media (min-width: $screen-md-min) { display: block; }
     min-height: 100%;
+    height: auto;
     background: $brand-primary;
     color: $lighter;
     padding: 0 30px;
+
+    @include fullheight;    
 }
 
+/**
+ * Vertically center all elements in the sidebar if their total height is 
+ * less than the viewport.
+ */
+#sidebar { display: flex; }
+#sidebar > .row { width: 100%; align-self: center; }
+
 #branding {
-    margin: 40px auto;
-    @media (min-width: $screen-lg-min) { margin: 80px auto; }
+    margin: 0 auto 40px;
     max-width: $sidebar-max-width;
     text-align: center;
 
@@ -28,7 +38,7 @@
 }
 
 #trips {
-    margin: 0 auto 40px;
+    margin: 0 auto;
     max-width: $sidebar-max-width;
     @include clearfix;
 
