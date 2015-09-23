@@ -3,11 +3,25 @@
     @media (min-width: $screen-md-min) { display: block; }
     min-height: 100%;
     height: auto;
-    background: $brand-primary;
-    color: $lighter;
     padding: 0 30px;
+    color: $lighter;
+    transition: background-color 1s ease;
+    background: $brand-primary;
+    &:hover { background: $brand-primary-saturated; }
+    @include fullheight;
 
-    @include fullheight;    
+    h2 {
+        white-space: nowrap;
+        margin: 0 0 10px;
+        font-size: 0.8em;
+        font-weight: 400;
+    }
+
+    a {
+        color: lighten($brand-primary, 33%);
+        &:hover { color: lighten($brand-primary, 66%); }
+        &:active { color: darken($brand-primary, 66%); }
+    }
 }
 
 /**
@@ -15,7 +29,7 @@
  * less than the viewport.
  */
 #sidebar { display: flex; }
-#sidebar > .row { width: 100%; align-self: center; }
+#sidebar > .vertical-center { width: 100%; align-self: center; }
 
 #branding {
     margin: 0 auto 40px;
@@ -23,22 +37,20 @@
     text-align: center;
 
     h1 {
+        font-size: 2.5em;
         margin: 0 0 10px;
-        text-transform: uppercase;
     }
     .strapline {
         margin: 0;
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
-        font-size: 0.8em;
-        line-height: 1.4em;
-        text-transform: uppercase;
-        color: lighten($brand-primary, 50%);
+        font-size: 1.1em;
+        color: lighten($brand-primary, 33%);
     }
 }
 
 #trips {
-    margin: 0 auto;
+    margin: 0 auto 10px;
     max-width: $sidebar-max-width;
     @include clearfix;
 
@@ -51,12 +63,16 @@
         }
 
         &.current img { opacity: 0.75; }
+    }
+}
 
-        h2 {
-            white-space: nowrap;
-            margin: 0 0 10px;
-            font-size: 0.8em;
-            font-weight: 400;
-        }
+#social-profiles {
+    margin: 40px auto 0;
+    text-align: center;
+    @include clearfix;
+    
+    .social-profile {
+        display: inline-block;
+        &::before { font-size: 1.5em; }
     }
 }

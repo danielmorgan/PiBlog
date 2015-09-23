@@ -14,9 +14,7 @@
                 <i class="menu-button"></i>
 
                 <div id="sidebar" class="col-md-5">
-                    <div class="row">
-                        @include('layouts.sidebar')
-                    </div>
+                    @include('layouts.sidebar')
                 </div>
 
                 <div id="content" class="col-md-7 col-md-offset-5">
