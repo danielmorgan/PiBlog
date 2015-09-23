@@ -1,17 +1,9 @@
 #sidebar {
     display: block;
-    @media (min-width: $screen-md-min) { display: block; }
-
-    height: 100%;
+    min-height: 100%;
     background: $brand-primary;
     color: $lighter;
     padding: 0 30px;
-    &:hover {
-        width: 90%;
-        & + #content {
-            margin-left: 90%;
-        }
-    }
 }
 
 #branding {
@@ -48,8 +40,13 @@
             padding: 0 15px;
         }
 
-        &.current {
-            opacity: 0.75;
+        &.current img { opacity: 0.75; }
+
+        h2 {
+            white-space: nowrap;
+            margin: 0 0 10px;
+            font-size: 0.8em;
+            font-weight: 400;
         }
     }
 }

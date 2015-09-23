@@ -8,16 +8,27 @@
 </div>
 
 <div id="trips">
-    <a href="#" class="trip current col-xs-4">
-        <img src="http://placehold.it/250x250" class="img-responsive">
-    </a>
-    <a href="#" class="trip col-xs-4">
-        <img src="http://placehold.it/250x250" class="img-responsive">
-    </a>
-    <a href="#" class="trip col-xs-4">
-        <img src="http://placehold.it/250x250" class="img-responsive">
-    </a>
-    <a href="#" class="trip col-xs-4">
-        <img src="http://placehold.it/250x250" class="img-responsive">
-    </a>
+    <div class="trip current col-xs-4">
+        <h2>Current Trip</h2>
+        <a href="#" class="">
+            <img src="http://placehold.it/250x250" class="img-responsive">
+        </a>
+    </div>
+    <div class="trip col-xs-4">
+        <h2>Past Trips</h2>
+        <a href="#">
+            <img src="http://placehold.it/250x250" class="img-responsive">
+        </a>
+    </div>
+    <div class="trip col-xs-4">
+        <h2>&nbsp;</h2>
+        <a href="#">
+            <img src="http://placehold.it/250x250" class="img-responsive">
+        </a>
+    </div>
+    <div class="trip col-xs-4">
+        <a href="#">
+            <img src="http://placehold.it/250x250" class="img-responsive">
+        </a>
+    </div>
 </div>

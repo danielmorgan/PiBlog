@@ -1,3 +1,7 @@
+#content {
+    background: #fff;
+}
+
 .post {
     margin: 0 auto 50px;
     max-width: $content-max-width;
@@ -6,7 +10,6 @@
         margin: 0;        
         font-size: 2em;
         font-weight: 800;
-        text-transform: uppercase;
         color: $brand-primary;
     }
     .meta-data {

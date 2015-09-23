@@ -9,17 +9,14 @@
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body>
-
         <div class="container-fluid">
-            <div class="row">
-                @include('layouts.header')
-            </div>
-
             <div class="row">
                 <i class="menu-button"></i>
 
                 <div id="sidebar" class="col-md-4 col-lg-5">
-                    @include('layouts.sidebar')
+                    <div class="row">
+                        @include('layouts.sidebar')
+                    </div>
                 </div>
 
                 <div id="content" class="col-md-8 col-md-offset-4 col-lg-7 col-lg-offset-5">
