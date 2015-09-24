@@ -11,7 +11,11 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <i class="menu-button"></i>
+                <header id="header">
+                    <div class="col-xs-12">
+                        <i class="menu-button icon icon-menu"></i>
+                    </div>
+                </header>
 
                 <div id="sidebar" class="col-md-5">
                     @include('layouts.sidebar')
