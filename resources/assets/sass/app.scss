@@ -40,19 +40,29 @@ a {
 }
 
 #header {
-    background: $brand-primary;
-    @include clearfix;
-    padding: 0.5em 0;
+    @media (min-width: $screen-md-min) { display: none; }
+    position: relative;
+    z-index: 10;
+    margin: 0 0 1em;
+    padding: 0.5em 1em;
+    background: lighten($brand-primary, 75%);
 }
 
 .menu-button {
     position: relative;
     z-index: 10;
+    cursor: pointer;
+
     &::before {
-        color: lighten($brand-primary, 66%);
+        transition: color 0.25s ease;
+        color: lighten($brand-primary, 33%);
         font-size: 2.5em;
         line-height: 1em;
-        &:hover { color: #fff; }
+    }
+    &:hover {
+        &::before {
+            color: $brand-primary;
+        }
     }
 }
 
