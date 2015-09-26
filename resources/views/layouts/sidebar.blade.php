@@ -39,7 +39,6 @@
         <h2>Follow us</h2>
         <a href="https://twitter.com/Morgan345" class="social-profile icon-twitter" title="@Morgan345 on Twitter"></a>
         <a href="https://www.facebook.com/paul.morgan.9277" class="social-profile facebook facebook-pi icon-facebook" title="Paul on Facebook"></a>
-        <a href="https://www.facebook.com/shazzywoo1971" class="social-profile facebook facebook-shaz icon-facebook" title="Shaz on Facebook"></a>
         <a href="/feed" class="social-profile icon-rss" title="RSS feed"></a>
     </div>
 

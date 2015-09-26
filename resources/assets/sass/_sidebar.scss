@@ -1,14 +1,16 @@
 #sidebar {
     display: none;
-    @media (min-width: $screen-md-min) { display: block; }
+    // @media (min-width: $screen-md-min) { display: block; }
+   
+    @include fullheight;
+    position: relative;
     min-height: 100%;
+    max-width: 100%;
     height: auto;
     padding: 0 30px;
     color: $lighter;
     transition: background-color 1s ease;
     background: $brand-primary;
-    &:hover { background: $brand-primary-saturated; }
-    @include fullheight;
 
     h2 {
         white-space: nowrap;
@@ -22,6 +24,11 @@
         &:hover { color: lighten($brand-primary, 66%); }
         &:active { color: darken($brand-primary, 66%); }
     }
+}
+
+#sidebar:hover,
+.slideout-open #sidebar {
+    background: $brand-primary-saturated;
 }
 
 /**

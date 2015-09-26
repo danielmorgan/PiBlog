@@ -11,15 +11,13 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <header id="header" class="col-xs-12">
-                    <i class="menu-button icon icon-menu"></i>
-                </header>
-
                 <div id="sidebar" class="col-md-5">
+                    <i class="menu-button shut icon-close"></i>
                     @include('layouts.sidebar')
                 </div>
 
                 <div id="content" class="col-md-7 col-md-offset-5">
+                    <i class="menu-button open icon-menu"></i>
                     @yield('content')
                 </div>
             </div>

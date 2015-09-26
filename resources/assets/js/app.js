@@ -2,13 +2,20 @@
 window._ = require('lodash');
 window.Vue = require('vue');
 window.$ = window.jQuery = require('jquery');
-require('slideout/dist/slideout');
+window.Slideout = require('slideout');
 require('bootstrap-sass/assets/javascripts/bootstrap');
 
 $(function() {
-	console.log('dom ready');
-	var slideout = new Slideout({
-		'panel': $('#content'),
-		'menu': $('#sidebar')
-	});
+    var slideout = new Slideout({
+        'panel': document.getElementById('content'),
+        'menu': document.getElementById('sidebar'),
+        'padding': window.innerWidth
+    });
+
+    $('.menu-button.open').on('click', function(event) {
+        slideout.open();
+    });
+    $('.menu-button.shut').on('click', function(event) {
+        slideout.close();
+    });
 });

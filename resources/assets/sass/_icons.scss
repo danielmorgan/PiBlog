@@ -14,18 +14,18 @@
     font-size: 1.5em;
     font-style: normal;
 }
-.icon-rss:before {
-    content: '\e000';
-}
-.icon-facebook:before {
-    content: '\e001';
-}
-.icon-twitter:before {
-    content: '\e002';
-}
 .icon-menu:before {
     content: "\e000";
 }
 .icon-close:before {
     content: "\e001";
+}
+.icon-rss:before {
+    content: '\e002';
+}
+.icon-facebook:before {
+    content: '\e003';
+}
+.icon-twitter:before {
+    content: '\e004';
 }

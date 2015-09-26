@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "_slideout";
 @import "_variables";
 @import "_mixins";
 @import "_icons";
@@ -39,29 +40,33 @@ a {
     &:focus { text-decoration: none; }
 }
 
-#header {
-    @media (min-width: $screen-md-min) { display: none; }
-    position: relative;
-    z-index: 10;
-    margin: 0 0 1em;
-    padding: 0.5em 1em;
-    background: lighten($brand-primary, 75%);
-}
-
 .menu-button {
-    position: relative;
+    display: block;
+    @media (min-width: $screen-md-min) { display: none; }
     z-index: 10;
+    padding: 1em;
     cursor: pointer;
-
     &::before {
-        transition: color 0.25s ease;
-        color: lighten($brand-primary, 33%);
-        font-size: 2.5em;
+        font-size: 40px;
         line-height: 1em;
     }
-    &:hover {
+
+    &.open {
+        position: fixed;
+        top: 0;
+        right: 0;
         &::before {
-            color: $brand-primary;
+            color: lighten($brand-primary, 33%);
+        }
+    }
+
+    &.shut {
+        position: absolute;
+        top: 0;
+        right: 0;
+        &::before {
+            color: lighten($brand-primary, 33%);
+            @media (min-width: $screen-md-min) { color: lighten($brand-primary, 15%); }
         }
     }
 }
