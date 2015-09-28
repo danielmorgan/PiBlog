@@ -1,0 +1,64 @@
+html, body { height: 100%; }
+
+body {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    color: $darker;
+    font-size: 16px;
+    line-height: 22px;
+    @media (min-width: $screen-sm-min) {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    @media (min-width: $screen-md-min) {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 22px;
+        line-height: 34px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    transition: color 0.25s ease;
+    &:hover { text-decoration: none; }
+    &:active { text-decoration: none; }
+    &:focus { text-decoration: none; }
+}
+
+.menu-button {
+    display: block;
+    @media (min-width: $screen-md-min) { display: none; }
+    z-index: 10;
+    padding: 1em;
+    cursor: pointer;
+    &::before {
+        font-size: 40px;
+        line-height: 1em;
+    }
+
+    &.open {
+        position: fixed;
+        top: 0;
+        right: 0;
+        &::before {
+            color: lighten($brand-primary, 33%);
+        }
+    }
+
+    &.shut {
+        position: absolute;
+        top: 0;
+        right: 0;
+        &::before {
+            color: lighten($brand-primary, 33%);
+            @media (min-width: $screen-md-min) { color: lighten($brand-primary, 15%); }
+        }
+    }
+}

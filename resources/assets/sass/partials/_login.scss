@@ -1,0 +1,37 @@
+body.login {
+    @include fullheight;
+    position: relative;
+    min-height: 100%;
+    max-width: 100%;
+    height: auto;
+    background: $brand-primary;
+
+    #login {
+        h1 { color: $lighter; }
+
+        form {
+            font-family: 'Open Sans', sans-serif;
+            background: lighten($brand-primary, 10%);
+            border: 1px solid lighten($brand-primary, 20%);
+            border-radius: 0.25em;
+            margin-top: 1em;
+            padding: 2em;
+            font-size: 0.8em;
+            text-align: center;
+            @include clearfix;
+
+            input[type=text], input[type=password] {
+                border: 1px solid $brand-primary;
+                color: $brand-primary;
+            }
+            input[type=password] { border-left: 0; }
+            .remember {
+                cursor: pointer;
+                font-weight: normal;
+                color: $lighter;
+                text-align: left;
+                padding: 6px 0;
+            }
+        }
+    }
+}
