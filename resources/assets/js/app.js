@@ -12,10 +12,13 @@ $(function() {
         'padding': window.innerWidth
     });
 
-    $('.menu-button.open').on('click', function(event) {
+    $('.menu-button.open').on('click', function() {
         slideout.open();
     });
-    $('.menu-button.shut').on('click', function(event) {
+    $('.menu-button.shut').on('click', function() {
+        slideout.close();
+    });
+    $(window).on('resize', function() {
         slideout.close();
     });
 });
