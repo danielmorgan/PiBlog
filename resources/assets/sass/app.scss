@@ -1,7 +1,7 @@
 /** Vendors */
 @import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "vendor/_bootstrap-custom";
 @import "vendor/_slideout";
 @import "vendor/_icons";
 
@@ -10,6 +10,7 @@
 @import "modules/_mixins";
 
 /** Partials */
+@import "partials/_elements";
 @import "partials/_main";
 @import "partials/_sidebar";
 @import "partials/_blog";

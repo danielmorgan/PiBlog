@@ -23,14 +23,18 @@ body.login {
             input[type=text], input[type=password] {
                 border: 1px solid $brand-primary;
                 color: $brand-primary;
+
+                &:focus {
+                    background: #FFFACF;
+                    outline: none;
+                }
             }
             input[type=password] { border-left: 0; }
             .remember {
                 cursor: pointer;
                 font-weight: normal;
-                color: $lighter;
+                color: $light;
                 text-align: left;
-                padding: 6px 0;
             }
         }
     }
