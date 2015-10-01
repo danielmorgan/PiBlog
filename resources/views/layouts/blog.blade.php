@@ -17,6 +17,17 @@
                 </div>
 
                 <div id="content" class="col-md-7 col-md-offset-5">
+                    <div class="errors">
+                        @if($errors->any())
+                            @foreach($errors->getMessages() as $error)
+                                <div class="error">
+                                    {{ $error[0] }}
+                                </p>
+                            @endforeach
+                        @endif 
+                    </div>
+
+                    
                     <i class="menu-button open icon-menu"></i>
                     @yield('content')
                 </div>

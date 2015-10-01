@@ -5,7 +5,6 @@
 @section('content')
 <div id="login" class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
     <h1>Login</h1>
-
     <form method="POST" action="/login">
         {!! csrf_field() !!}
 

@@ -12,6 +12,17 @@
         <div class="container-fluid">
             <div class="row">
                 <div id="content" class="col-xs-12">
+                    <div class="errors">
+                        @if($errors->any())
+                            @foreach($errors->getMessages() as $error)
+                                <div class="error">
+                                    {{ $error[0] }}
+                                </p>
+                            @endforeach
+                        @endif 
+                    </div>
+
+                    
                     @yield('content')
                 </div>
             </div>
