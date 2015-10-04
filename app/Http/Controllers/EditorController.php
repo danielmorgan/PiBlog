@@ -22,4 +22,18 @@ class EditorController extends Controller
         return view('editor.index')
             ->with(compact('posts'));
     }
+
+    /**
+     * Show the post editor.
+     *
+     * @param $id
+     * @return Response
+     */
+    public function postEditor($id)
+    {
+        $post = Post::find($id);
+
+        return view('editor.posts.edit')
+            ->with(compact('post'));
+    }
 }

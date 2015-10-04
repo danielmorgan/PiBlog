@@ -1,6 +1,6 @@
 @extends('layouts.editor')
 @section('title', 'All Posts')
-@section('body-class', 'index')
+@section('body-class', 'dashboard')
 
 @section('content')
 <table class="table posts">
@@ -13,7 +13,9 @@
 	</thead>
 	<tbody>
 		@foreach ($posts as $post)
-			<tr class="post">
+			<tr cla
+
+				ss="post">
 				<td>
 					<a href="/editor/post/{{ $post->id }}">{{ $post->title }}</a>
 				</td>

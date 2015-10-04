@@ -12,7 +12,12 @@
         <div class="container-fluid">
             <div class="row">
                 <div id="header" class="col-xs-12">
-                    <h1>Editor</h1>
+                    <a href="/editor">
+                        <h1>Editor</h1>
+                    </a>
+                    <div class="actions">
+                        <a href="/auth/logout">Logout</a>
+                    </div>
                 </div>
             </div>
 
