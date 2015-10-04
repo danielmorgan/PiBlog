@@ -8,7 +8,6 @@
 
 @mixin fullheight {
     /* Forces element to fill the full height of the viewport. */
-    position: fixed !important;
     position: absolute;
     top: 0;
     right: 0;
@@ -20,4 +19,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.vertical-center {
+    align-items: flex-start;
 }

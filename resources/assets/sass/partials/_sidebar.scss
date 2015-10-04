@@ -1,12 +1,7 @@
 #sidebar {
-    display: none;
-    // @media (min-width: $screen-md-min) { display: block; }
-   
     @include fullheight;
-    position: relative;
-    min-height: 100%;
-    max-width: 100%;
-    height: auto;
+    @include verticalcenter;
+    position: fixed;
     padding: 0 30px;
     color: $lighter;
     transition: background-color 1s ease;
@@ -30,13 +25,6 @@
 .slideout-open #sidebar {
     background: $brand-primary-saturated;
 }
-
-/**
- * Vertically center all elements in the sidebar if their total height is 
- * less than the viewport.
- */
-#sidebar { display: flex; }
-#sidebar > .vertical-center { width: 100%; align-self: center; }
 
 #branding {
     margin: 0 auto 40px;
