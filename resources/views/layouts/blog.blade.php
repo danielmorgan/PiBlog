@@ -8,7 +8,7 @@
 
         <link rel="stylesheet" href="/css/app.css">
     </head>
-    <body>
+    <body class="@yield('body-class')">
         <div class="container-fluid">
             <div class="row">
                 <div id="sidebar" class="col-md-5">

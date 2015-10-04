@@ -1,9 +1,10 @@
 @extends('layouts.editor')
-@section('title', 'Editor')
+@section('title', 'All Posts')
+@section('body-class', 'editor')
 
 @section('content')
 <h1>Posts</h1>
-<table class="posts">
+<table>
 	@foreach ($posts as $post)
 	    <tr class="post">
 	        <td>{{ $post->title }}</td>
