@@ -10,10 +10,10 @@
 
         <div class="row">
             <div class="col-sm-6">
-                <input type="text" name="email" placeholder="Email" value="{{ old('email') }}">
+                <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" required>
             </div>
             <div class="col-sm-6">
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Password" required>
             </div>
             <div class="col-sm-6">
                 <label class="remember" for="remember"><input type="checkbox" name="remember" id="remember"> Remember Me</label>
