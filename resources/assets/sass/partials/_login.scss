@@ -1,5 +1,6 @@
 body.login {
     @include fullheight;
+    @include verticalcenter;
     position: relative;
     min-height: 100%;
     max-width: 100%;
@@ -7,7 +8,12 @@ body.login {
     background: $brand-primary;
 
     #login {
-        h1 { color: $lighter; }
+        h1 {
+            margin-top: -2em;
+            text-align: center;
+            font-weight: normal;
+            color: $lighter;
+        }
 
         form {
             font-family: 'Open Sans', sans-serif;

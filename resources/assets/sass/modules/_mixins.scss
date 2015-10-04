@@ -15,3 +15,9 @@
     bottom: 0;
     left: 0;
 }
+
+@mixin verticalcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
