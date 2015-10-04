@@ -1,6 +1,6 @@
 @extends('layouts.blog')
 @section('title', 'All Posts')
-@section('body-class', 'blog index')
+@section('body-class', 'index')
 
 @section('content')
 <section class="posts">

@@ -8,17 +8,16 @@
 
         <link rel="stylesheet" href="/css/app.css">
     </head>
-    <body class="@yield('body-class')">
+    <body class="simple @yield('body-class')">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
-                    @include('errors.flash')
-                    
                     @yield('content')
                 </div>
             </div>
         </div>
 
+        @include('errors.flash')
         <script src="/js/app.js"></script>
     </body>
 </html>

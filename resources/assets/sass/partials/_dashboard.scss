@@ -1,0 +1,27 @@
+body.editor.index {
+	.table {
+		margin: 1em 0;
+
+		th {
+			font-family: 'Montserrat';
+		}
+
+		td, th {
+			padding: 0 0.5em;
+		}
+
+		tr:nth-child(odd) td { background: lighten($brand-primary, 75%); }
+		tr:nth-child(even) td { background: lighten($brand-primary, 72%); }
+
+		tr:hover td {
+			transition: background 0.25s ease;
+			background: #fff;
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			padding: 0.5em 0;
+		}
+	}
+}

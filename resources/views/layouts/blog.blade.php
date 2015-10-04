@@ -8,7 +8,7 @@
 
         <link rel="stylesheet" href="/css/app.css">
     </head>
-    <body class="@yield('body-class')">
+    <body class="blog @yield('body-class')">
         <div class="container-fluid">
             <div class="row">
                 <div id="sidebar" class="col-md-5">
@@ -17,14 +17,13 @@
                 </div>
 
                 <div id="content" class="col-md-7 col-md-offset-5">
-                    @include('errors.flash')
-                    
                     <i class="menu-button open icon-menu"></i>
                     @yield('content')
                 </div>
             </div>
         </div>
 
+        @include('errors.flash')
         <script src="/js/app.js"></script>
     </body>
 </html>
