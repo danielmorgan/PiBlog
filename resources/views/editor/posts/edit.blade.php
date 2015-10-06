@@ -3,11 +3,11 @@
 @section('body-class', 'post edit')
 
 @section('content')
-    <form action="/editor/post/{{ $post->id }}" method="POST" id="post-editor">
+    <form action="/editor/post/{{ $post->id }}" method="POST">
         {!! method_field('PUT') !!}
         {!! csrf_field() !!}
 
-        <div class="col-xs-6">
+        <div id="post-editor" class="col-sm-6">
             <div class="form-group">
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" value="{{ $post->title }}">
@@ -21,7 +21,7 @@
             <input type="submit">
         </div>
 
-        <div id="markdown-preview" class="col-xs-6">
+        <div id="markdown-preview" class="col-sm-6">
             <h1>{{ $post->title }}</h1>
             <div class="content">{!! $post->content !!}</div>
         </div>

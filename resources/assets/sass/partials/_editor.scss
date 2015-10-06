@@ -36,8 +36,12 @@ body.editor {
 
 body.editor.post.edit {
 	input#title {
+		transition: border 0.25s ease;
 		width: 100%;
+		border: 0;
+		border-bottom: 3px solid $light;
 		font-family: 'Montserrat', sans-serif;
+		&:focus { border-bottom: 3px solid $brand-primary; }
 	}
 
 	.form-group {
@@ -50,9 +54,7 @@ body.editor.post.edit {
 	height: 500px;
 	padding-right: 1em;
 	border: 0;
-	border-right: 3px solid $light;
 	font-family: monospace;
 	font-size: 0.7em;
 	line-height: 1.6em;
-	&:focus { outline: none; }
 }

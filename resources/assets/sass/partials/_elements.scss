@@ -35,3 +35,7 @@
 .nopadding {
     padding: 0;
 }
+
+input, textarea {
+    &:focus { outline: none; }
+}
