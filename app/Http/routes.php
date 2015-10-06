@@ -8,5 +8,6 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 Route::group(['prefix' => 'editor', 'middleware' => 'auth'], function() {
     Route::get('/', 'EditorController@index');
-    Route::get('post/{id}', 'EditorController@postEditor');
+    Route::resource('post', 'PostsController',
+        ['only' => ['edit', 'store']]);
 });

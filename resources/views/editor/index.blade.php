@@ -13,17 +13,15 @@
 	</thead>
 	<tbody>
 		@foreach ($posts as $post)
-			<tr cla
-
-				ss="post">
+			<tr class="post">
 				<td>
-					<a href="/editor/post/{{ $post->id }}">{{ $post->title }}</a>
+					<a href="/editor/post/{{ $post->id }}/edit">{{ $post->title }}</a>
 				</td>
 				<td class="hidden-xs">
-					<a href="/editor/post/{{ $post->id }}">{{ $post->user->name }}</a>
+					<a href="/editor/post/{{ $post->id }}/edit">{{ $post->user->name }}</a>
 				</td>
 				<td class="hidden-xs">
-					<a href="/editor/post/{{ $post->id }}">@datetime($post->created_at)</a>
+					<a href="/editor/post/{{ $post->id }}/edit">@datetime($post->created_at)</a>
 				</td>
 			</tr>
 		@endforeach

@@ -3,12 +3,28 @@
 @section('body-class', 'post edit')
 
 @section('content')
-    <div class="editor col-xs-6">
-        <input type="text" name="title" value="{{ $post->title }}">
-        <textarea name="content">{{ $post->content }}</textarea>
-    </div>
-    <div class="preview col-xs-6">
-        <h1>{{ $post->title }}</h1>
-        <div class="content">{!! $post->content !!}</div>
-    </div>
+    <form action="/editor/post/{{ $post->id }}" method="POST" id="post-editor">
+        {!! method_field('PUT') !!}
+        {!! csrf_field() !!}
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" value="{{ $post->title }}">
+            </div>
+
+            <div class="form-group">
+                <label for="markdown-editor">Content:</label>
+                <textarea id="markdown-editor" name="content">{{ $post->content }}</textarea>
+            </div>
+
+            <input type="submit">
+        </div>
+
+        <div id="markdown-preview" class="col-xs-6">
+            <h1>{{ $post->title }}</h1>
+            <div class="content">{!! $post->content !!}</div>
+        </div>
+
+    </form>
 @endsection
