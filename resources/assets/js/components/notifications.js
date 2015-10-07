@@ -3,8 +3,8 @@
 /**
  * Growl notifications.
  */
-if ($('.errors div').length) {
-	$.each($('.errors div'), function () {
+if ($('#messages div').length) {
+	$.each($('#messages div'), function () {
 		var style = 'default',
 			title = 'default',
 			message = $(this).text();

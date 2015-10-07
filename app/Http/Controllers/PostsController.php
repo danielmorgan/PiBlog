@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Session;
 
 class PostsController extends Controller
 {
@@ -63,7 +64,7 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::find($id);
+        $post = Post::findOrFail($id);
 
         return view('editor.posts.edit')
             ->with(compact('post'));
@@ -78,7 +79,20 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'content' => 'required'
+        ]);
+
+        $post->fill($request->all());
+
+        if ($post->save()) {
+            Session::flash('notice', 'Post successfully updated!');
+        }
+
+        return redirect()->back();
     }
 
     /**
