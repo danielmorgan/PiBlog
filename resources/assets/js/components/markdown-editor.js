@@ -2,11 +2,8 @@
 
 var marked = require('marked');
 
-var markdownEditor = new Vue({
+var editor = new Vue({
     el: '#markdown-editor',
-    data: {
-        content: '# Test'
-    },
     filters: {
         marked: marked
     }

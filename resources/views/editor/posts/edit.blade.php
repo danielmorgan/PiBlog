@@ -10,19 +10,19 @@
         <div class="col-sm-6">
             <div class="form-group">
                 <label for="title">Title:</label>
-                <input type="text" id="title" name="title" value="{{ $post->title }}">
+                <input type="text" id="title" name="title" v-model="title" value="{{ $post->title }}">
             </div>
 
             <div class="form-group">
                 <label for="content">Content:</label>
-                <textarea id="content" name="content" v-model="content" debounce="300"></textarea>
+                <textarea id="content" name="content" v-model="content" debounce="300">{!! $post->content !!}</textarea>
             </div>
 
             <input type="submit">
         </div>
 
         <div id="markdown-preview" class="col-sm-6">
-            <h1>{{ $post->title }}</h1>
+            <h1 v-text="title">{{ $post->title }}</h1>
             <div v-html="content | marked"></div>
         </div>
     </form>
