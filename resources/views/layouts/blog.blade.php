@@ -13,7 +13,7 @@
             <div class="row">
                 <div id="sidebar" class="col-md-5">
                     <i class="menu-button shut icon-close"></i>
-                    @include('layouts.sidebar')
+                    @include('includes.sidebar')
                 </div>
 
                 <div id="content" class="col-md-7 col-md-offset-5">

@@ -15,7 +15,9 @@
 
             <div class="form-group">
                 <label for="content">Content:</label>
-                <textarea id="content" name="content" v-model="content" debounce="300">{!! $post->content !!}</textarea>
+                @include('includes.markdown-help')
+
+                <textarea id="content" name="content" v-model="content" v-attr="height:h">{!! $post->content !!}</textarea>
             </div>
 
             <input type="submit">

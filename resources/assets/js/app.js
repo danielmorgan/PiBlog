@@ -1,7 +1,6 @@
 'use strict';
 
 //window._ = require('lodash');
-//require('bootstrap-sass/assets/javascripts/bootstrap');
 window.Vue = require('vue');
 window.$ = window.jQuery = require('jquery');
 window.Slideout = require('slideout');

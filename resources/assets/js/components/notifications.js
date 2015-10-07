@@ -11,9 +11,7 @@ if ($('#messages div').length) {
 
 		$(this).hide();
 
-		if ($(this).hasClass('notice')) style = title = 'notice';
-		if ($(this).hasClass('warning')) style = title = 'warning';
-		if ($(this).hasClass('error')) style = title = 'error';
+		style = title = $(this).attr('class');
 
 		$.growl({
 			fixed: true,

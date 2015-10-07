@@ -39,3 +39,8 @@
 input, textarea {
     &:focus { outline: none; }
 }
+
+.popover,
+.popover-content {
+    max-width: none !important;
+}
