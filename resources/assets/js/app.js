@@ -7,5 +7,6 @@ window.Slideout = require('slideout');
 window.growl = require('jquery.growl');
 
 require('./components/sidebar.js');
+require('./components/posts.js');
 require('./components/notifications.js');
 require('./components/markdown-editor.js');

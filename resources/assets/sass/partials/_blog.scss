@@ -29,11 +29,11 @@ body.blog.index {
             margin-bottom: 0;
         }
 
-        h1 {
+        h1.title {
             margin: 0;
             font-size: 2em;
             font-weight: 800;
-            color: $brand-primary;
+            color: $brand-primary-saturated;
         }
         .meta-data {
             color: $middle;
