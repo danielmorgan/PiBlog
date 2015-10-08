@@ -12,7 +12,7 @@
 	            <span class="date">on @datetime($post->created_at)</span>
 	            <span class="ago">(@ago($post->created_at))</span>
 	        </div>
-	        <div class="content">{!! $post->content !!}</div>
+	        <div class="content">@markdown($post->content)</div>
 	    </article>
 	@endforeach
 </section>

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Blade;
 use Illuminate\Support\ServiceProvider;
+use Markdown;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +20,9 @@ class AppServiceProvider extends ServiceProvider
         });
         Blade::directive('ago', function($expression) {
             return "<?php echo with{$expression}->diffForHumans(); ?>";
+        });
+        Blade::directive('markdown', function($expression) {
+            return "<?php echo Markdown::convertToHtml({$expression}); ?>";
         });
     }
 
