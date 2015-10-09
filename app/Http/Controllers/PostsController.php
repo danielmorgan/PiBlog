@@ -89,7 +89,7 @@ class PostsController extends Controller
         $post->fill($request->all());
 
         if ($post->save()) {
-            Session::flash('notice', 'Post successfully updated!');
+            Session::flash('notice', 'Post successfully updated');
         }
 
         return redirect()->back();
@@ -103,6 +103,10 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if (Post::destroy($id)) {
+            Session::flash('notice', 'Post successfully deleted');
+        }
+
+        return redirect()->back();
     }
 }

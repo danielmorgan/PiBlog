@@ -2,24 +2,25 @@ body.editor.dashboard {
 	.table {
 		th {
 			font-family: 'Montserrat';
+			padding: 0.5em;
 		}
 
-		td, th {
-			padding: 0 0.5em;
-		}
-
-		tr:nth-child(odd) td { background: lighten($brand-primary, 75%); }
-		tr:nth-child(even) td { background: lighten($brand-primary, 72%); }
+		td { padding: 0 0.5em; }
 
 		tr:hover td {
 			transition: background 0.25s ease;
-			background: #fff;
+			background: lighten($brand-primary-saturated, 70%);
 		}
 
-		a {
+		td > a:not(.btn) {
 			display: block;
 			width: 100%;
 			padding: 0.5em 0;
+		}
+
+		.actions a.btn,
+		.actions form {
+			display: inline-block;
 		}
 	}
 }
