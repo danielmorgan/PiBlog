@@ -24,7 +24,7 @@
         </div>
 
         <div id="markdown-preview" class="col-sm-6">
-            <h1 v-text="title">{{ $post->title }}</h1>
+            <h1 class="title" v-text="title">{{ $post->title }}</h1>
             <div v-html="content | marked"></div>
         </div>
     </form>

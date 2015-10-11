@@ -5,39 +5,43 @@ body.blog.index {
     }
 
     .posts {
-        padding: 1em 0;
-        @media (min-width: $screen-md-min) {
-            padding: 2em 0;
-        }
-        @media (min-width: $screen-md-min) {
-            margin: 0 2em;
-        }
-        @media (min-width: $screen-lg-min) {
-            margin-left: 8.33%;
-        }
+        padding-top: 2em;
         @include clearfix;
     }
 
     .post {
-        max-width: $content-max-width;
-        margin: 0 auto 3em;
-        @media (min-width: $screen-lg-min) {
-            margin-left: 0;
-            margin-right: 0;
-        }
+        margin: 0 0 2em;
+        padding: 0 15px 2em;
+        border-bottom: 2px solid $lighter;
         &:last-child {
             margin-bottom: 0;
+            border-bottom: 0;
         }
 
-        h1.title {
-            margin: 0;
-            font-size: 2em;
-            font-weight: 800;
-            color: $brand-primary-saturated;
-        }
-        .meta-data {
-            color: $middle;
-            margin: 0 0 10px;
+        & > .content-wrap {
+            max-width: $content-max-width;
+            margin-left: auto;
+            margin-right: auto;
+            @media (min-width: $screen-md-min) {
+                margin: 0 2em;
+            }
+            @media (min-width: $screen-lg-min) {
+                margin-left: 8.33%;
+            }
+
+            h1.title {
+                margin-top: 0;
+                font-size: 2em;
+                font-weight: 700;
+                color: lighten($brand-primary, 35%);
+            }
+
+            .meta-data {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 0.8em;
+                color: $middle;
+                margin: 0.25em 0 1.5em;
+            }
         }
     }
 

@@ -11,12 +11,12 @@
     <body class="blog @yield('body-class')">
         <div class="container-fluid">
             <div class="row">
-                <div id="sidebar" class="col-md-5">
+                <div id="sidebar" class="col-md-4">
                     <i class="menu-button shut icon-close"></i>
                     @include('includes.sidebar')
                 </div>
 
-                <div id="content" class="col-md-7 col-md-offset-5">
+                <div id="content" class="col-md-8 col-md-offset-4 nopadding">
                     <i class="menu-button open icon-menu"></i>
                     @yield('content')
                 </div>
