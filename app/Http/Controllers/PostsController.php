@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Photo;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -73,6 +74,7 @@ class PostsController extends Controller
     /**
      * Update the specified resource in storage.
      *
+     * @todo Slim controller action down.
      * @param  Request  $request
      * @param  int  $id
      * @return Response
@@ -81,11 +83,21 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
 
+        // Validate request
         $this->validate($request, [
             'title' => 'required|max:255',
             'content' => 'required'
         ]);
 
+        // Save Photo record then upload file
+        if ($request->hasFile('featured_photo')) {
+            $featuredPhoto = new Photo(['filename' => $request->file('featured_photo')->getClientOriginalName()]);
+            $featuredPhoto->upload($request->file('featured_photo'));
+            $featuredPhoto->save();
+            $post->featured_photo_id = $featuredPhoto->id;
+        }
+
+        // Mass-assign validated Post attributes
         $post->fill($request->all());
 
         if ($post->save()) {

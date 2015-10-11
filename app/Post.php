@@ -28,4 +28,14 @@ class Post extends Model
 	{
 		return $this->belongsTo(User::class);
 	}
+
+	/**
+	 * Posts have one featured photo.
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\HasOne
+	 */
+	public function featuredPhoto()
+	{
+		return $this->hasOne(Photo::class, 'id', 'featured_photo_id');
+	}
 }

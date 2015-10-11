@@ -141,6 +141,7 @@ return [
          * 3rd Party Service Providers...
          */
         GrahamCampbell\Markdown\MarkdownServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -199,6 +200,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Markdown'  => GrahamCampbell\Markdown\Facades\Markdown::class,
+        'Image'     => Intervention\Image\Facades\Image::class,
 
     ],
 

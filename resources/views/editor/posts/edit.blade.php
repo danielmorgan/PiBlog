@@ -3,7 +3,7 @@
 @section('body-class', 'post edit')
 
 @section('content')
-    <form action="/editor/post/{{ $post->id }}" method="POST" id="markdown-editor">
+    <form action="/editor/post/{{ $post->id }}" method="POST" enctype="multipart/form-data" id="markdown-editor">
         {!! method_field('PUT') !!}
         {!! csrf_field() !!}
 
@@ -20,6 +20,7 @@
                 <textarea id="content" name="content" v-model="content" v-attr="height:h">{!! $post->content !!}</textarea>
             </div>
 
+            <input type="file" id="featured_photo" name="featured_photo">
             <input type="submit">
         </div>
 
