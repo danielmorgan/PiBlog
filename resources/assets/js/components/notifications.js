@@ -21,7 +21,5 @@ if ($('#messages div').length) {
 			title: title.charAt(0).toUpperCase() + title.substring(1),
 			message: message,
 		});
-
-		console.log("Growling", style, title, message);
 	});
 }
