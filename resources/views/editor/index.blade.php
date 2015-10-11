@@ -26,7 +26,7 @@
 					<form action="/editor/post/{{ $post->id }}" method="POST">
 						{!! method_field('DELETE') !!}
 						{!! csrf_field() !!}
-						<input type="submit" class="btn btn-danger" value="Delete">
+						<input type="submit" class="btn btn-danger delete" value="Delete">
 					</form>
 				</td>
 			</tr>
