@@ -35,8 +35,16 @@ a {
     padding: 1em;
     cursor: pointer;
     &::before {
+        transition: color 0.25s ease;
         font-size: 40px;
         line-height: 1em;
+        color: lighten($brand-primary, 20%);
+    }
+
+    &:hover {
+        &::before {
+            color: $brand-primary-saturated;
+        }
     }
 
     &.open {
@@ -44,7 +52,11 @@ a {
         top: 0;
         right: 0;
         &::before {
-            color: lighten($brand-primary, 33%);
+            text-shadow: 0 0 30px rgba(255, 255, 255, 1),
+                0 0 15px rgba(255, 255, 255, 0.75),
+                0 0 10px rgba(255, 255, 255, 0.5),
+                0 0 5px rgba(255, 255, 255, 0.25),
+                -1px -1px 30px rgba(255, 255, 255, 1);
         }
     }
 
@@ -55,6 +67,9 @@ a {
         &::before {
             color: lighten($brand-primary, 33%);
             @media (min-width: $screen-md-min) { color: lighten($brand-primary, 15%); }
+        }
+        &:hover::before {
+            color: lighten($brand-primary, 66%);
         }
     }
 }
