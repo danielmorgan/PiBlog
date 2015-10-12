@@ -19,7 +19,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'desc')->get();
+        $posts = Post::orderBy('created_at', 'desc')
+            ->with('featuredPhoto')
+            ->get();
 
         return view('posts.index')
             ->with(compact('posts'));
