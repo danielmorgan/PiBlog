@@ -91,10 +91,13 @@ class PostsController extends Controller
 
         // Save Photo record then upload file
         if ($request->hasFile('featured_photo')) {
-            $featuredPhoto = new Photo(['filename' => $request->file('featured_photo')->getClientOriginalName()]);
-            $featuredPhoto->upload($request->file('featured_photo'));
-            $featuredPhoto->save();
-            $post->featured_photo_id = $featuredPhoto->id;
+            $featuredPhoto = new Photo();
+            $filename = $featuredPhoto->upload($request->file('featured_photo'));
+            if ($filename) {
+                $featuredPhoto->filename = $filename;
+                $featuredPhoto->save();
+                $post->featured_photo_id = $featuredPhoto->id;
+            }
         }
 
         // Mass-assign validated Post attributes
