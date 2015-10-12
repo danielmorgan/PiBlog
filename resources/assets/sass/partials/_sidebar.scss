@@ -21,6 +21,8 @@
     }
 
     .vertical-center {
+        position: relative;
+        z-index: 10;
         padding: 20% 0;
     }
 }
@@ -31,8 +33,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.5;
+    opacity: 0.33;
     background-size: cover;
+    background-position: center center;
+    transition: background 1s ease;
+    mix-blend-mode: lighten;
 }
 
 #sidebar:hover,
@@ -55,7 +60,7 @@
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
         font-size: 1.1em;
-        color: lighten($brand-primary, 33%);
+        color: $light;
     }
 }
 

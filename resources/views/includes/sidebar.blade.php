@@ -1,5 +1,3 @@
-<div id="featured-photo"></div>
-
 <div class="vertical-center">
 
     <div id="branding">
