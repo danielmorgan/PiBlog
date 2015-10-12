@@ -1,7 +1,11 @@
 body.blog.index {
+    > .container-fluid,
+    > .container-fluid > .row,
+    > .container-fluid > .row > #content { height: 100%; }
 
     #content {
         background: #fff;
+        min-height: 100%;
     }
 
     .posts {
@@ -12,7 +16,7 @@ body.blog.index {
     .post {
         margin: 0 0 2em;
         padding: 0 15px 2em;
-        border-bottom: 2px solid $lighter;
+        border-bottom: 3px solid $lighter;
         &:last-child {
             margin-bottom: 0;
             border-bottom: 0;
