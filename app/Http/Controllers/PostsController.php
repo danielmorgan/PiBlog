@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Session;
+use Auth;
 
 class PostsController extends Controller
 {
@@ -34,7 +35,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('editor.posts.create');
     }
 
     /**
@@ -45,7 +46,37 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+
+        // Validate request
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'content' => 'required'
+        ]);
+
+        // Save Photo record then upload file
+        if ($request->hasFile('featured_photo')) {
+            $featuredPhoto = new Photo();
+            $filename = $featuredPhoto->upload($request->file('featured_photo'));
+            if ($filename) {
+                $featuredPhoto->filename = $filename;
+                $featuredPhoto->save();
+                $post->featured_photo_id = $featuredPhoto->id;
+            }
+        }
+
+        // Mass-assign validated Post attributes
+        $post->fill($request->all());
+
+        // Associate post with currently logged in user
+        $post->user()->associate(Auth::User());
+
+        if ($post->save()) {
+            Session::flash('notice', 'Post successfully created');
+            return redirect('/editor/post/' . $post->id . '/edit');
+        }
+
+        return redirect()->back()->withInput();
     }
 
     /**

@@ -16,7 +16,9 @@
                         <h1>Editor</h1>
                     </a>
                     <div class="actions">
-                        <a href="/auth/logout">Logout</a>
+                        <a href="/editor/post/create" class="btn">+ Create Post</a>
+                        <a href="/" class="btn">&lt; Back to site</a>
+                        <a href="/auth/logout" class="btn">Logout</a>
                     </div>
                 </div>
             </div>

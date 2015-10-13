@@ -10,6 +10,7 @@ body.editor {
 		h1 {
 			font-weight: normal;
 			margin: 0;
+			margin-left: 1em;
 			float: left;
 			font-weight: 700;
 		}
@@ -17,24 +18,22 @@ body.editor {
 		a {
 			color: $light;
 			&:hover { color: $lighter; }
-			&:active, &:focus { color: $middle; }
 		}
 
 		.actions {
 			float: right;
-			border: 1px solid lighten($brand-primary, 10%);
-			padding: 0 1em;
 			margin-right: 1em;
 
-
 			a {
-				text-decoration: underline;
+				border: 1px solid lighten($brand-primary, 10%);
 				font-size: 0.8em;
+				margin-right: 0.5em;
 			}
 		}
 	}
 }
 
+body.editor.post.create,
 body.editor.post.edit {
 	input#title {
 		transition: border 0.25s ease;

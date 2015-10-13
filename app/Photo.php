@@ -27,16 +27,14 @@ class Photo extends Model
 		$path = public_path('photo' . DIRECTORY_SEPARATOR . $datetime->year);
 		$filename = $datetime->timestamp . '.' . $file->getClientOriginalExtension();
 
-		if (!File::isDirectory($path)) {
+		if (! File::isDirectory($path)) {
 			File::makeDirectory($path, 0777, true, true);
 		}
 
-		if (!Image::make($file)->save($path . DIRECTORY_SEPARATOR . $filename)) {
-			Session::flash('error', 'There was a problem uploading the photo');
-			return false;
+		if (Image::make($file)->save($path . DIRECTORY_SEPARATOR . $filename)) {
+			return $datetime->year . '/' . $filename;
 		}
 
-		Session::flash('notice', 'Photo uploaded successfully');
-		return $datetime->year . '/' . $filename;
+		return false;
 	}
 }
