@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/', 'PostsController@index');
+Route::get('/{data?}', 'PostsController@index')->where('test', '.*');
 
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');

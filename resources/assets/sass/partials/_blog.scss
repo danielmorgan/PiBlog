@@ -8,7 +8,7 @@ body.blog.index {
         min-height: 100%;
     }
 
-    .posts {
+    #posts {
         padding-top: 2em;
         @include clearfix;
     }

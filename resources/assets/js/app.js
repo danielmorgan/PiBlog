@@ -2,6 +2,7 @@
 
 //window._ = require('lodash');
 window.Vue = require('vue');
+window.VueRouter = require('vue-router')
 window.$ = window.jQuery = require('jquery');
 window.Slideout = require('slideout');
 window.growl = require('jquery.growl');
