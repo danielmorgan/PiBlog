@@ -1,7 +1,18 @@
 'use strict';
 
+var VueRouter = require('vue-router')
+
 $(function() {
     if ($('.posts .post').length) {
+        /**
+         * Vue component
+         * @todo All of this stuff before I catch a flight in 6 hours.
+         */
+
+
+        /**
+         * Image stuff
+         */
         $('.post img')
             .addClass('img-responsive')
             .wrap(function() {

@@ -3,7 +3,9 @@
     <div id="branding">
         <div class="row">
             <div class="col-xs-12">
-                <h1>Pi's Trips</h1>
+                <a href="/">
+                    <h1>Pi's Trips</h1>
+                </a>
                 <p class="strapline">A blog about roadtripping around the United States of America.</p>
             </div>
         </div>

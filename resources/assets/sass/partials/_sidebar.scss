@@ -27,9 +27,9 @@
 }
 
 #featured-photo {
-    width: 100%;
+    width: inherit;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     opacity: 0.33;
@@ -54,6 +54,7 @@
         margin: 0 0 10px;
         font-weight: 700;
     }
+    a { color: #fff; }
     .strapline {
         margin: 0;
         font-family: 'Open Sans', sans-serif;
