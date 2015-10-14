@@ -12,13 +12,15 @@
         <div class="container-fluid">
             <div class="row">
                 <div id="header" class="col-xs-12">
-                    <a href="/editor">
-                        <h1>Editor</h1>
-                    </a>
-                    <div class="actions">
-                        <a href="/editor/post/create" class="btn">+ Create Post</a>
-                        <a href="/" class="btn">&lt; Back to site</a>
-                        <a href="/auth/logout" class="btn">Logout</a>
+                    <div class="row">
+                        <a href="/editor" class="col-xs-12 col-sm-2">
+                            <h1>Editor</h1>
+                        </a>
+                        <div class="actions col-xs-12 col-sm-10">
+                            <a href="/editor/post/create" class="btn">+ Create Post</a>
+                            <a href="/" class="btn">&nwarr; Back to blog</a>
+                            <a href="/auth/logout" class="btn">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>

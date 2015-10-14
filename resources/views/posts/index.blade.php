@@ -7,6 +7,7 @@
     @foreach ($posts as $post)
         <article class="post" 
             id="{{ $post->slug }}"
+            data-slug="{{ $post->slug }}"
         @if ($post->featuredPhoto)
             data-featured-photo="/photo/{{ $post->featuredPhoto->filename }}"
         @endif>

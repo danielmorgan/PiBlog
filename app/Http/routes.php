@@ -1,7 +1,5 @@
 <?php
 
-Route::get('/{data?}', 'PostsController@index')->where('test', '.*');
-
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
@@ -11,3 +9,5 @@ Route::group(['prefix' => 'editor', 'middleware' => 'auth'], function() {
     Route::resource('post', 'PostsController',
         ['only' => ['create', 'store', 'edit', 'update', 'destroy']]);
 });
+
+Route::get('/{data?}', 'PostsController@index')->where('test', '.*');
